@@ -162,13 +162,13 @@ export default function Build() {
       {/* ONGOING ACCESS AND MAINTENANCE */}
       <section className="py-24">
         <div className="container-custom flex flex-col items-center text-center">
-          <div className="max-w-2xl">
+          <div className="max-w-2xl text-zinc-900" style={{ color: '#111827' }}>
             <h2 className="text-2xl font-serif mb-6 italic">Ongoing Access and Maintenance</h2>
-            <p className="text-sm uppercase tracking-widest mb-4 opacity-80">Building something is one moment. Operating it is ongoing.</p>
-            <p className="text-sm text-zinc-900 leading-relaxed mb-6">
+            <p className="text-sm uppercase tracking-widest mb-4 text-zinc-900" style={{ color: '#111827' }}>Building something is one moment. Operating it is ongoing.</p>
+            <p className="text-sm leading-relaxed mb-6 text-zinc-900" style={{ color: '#111827' }}>
               We offer website and system reviews. Maintenance and cleanup. Guidance on ads and visibility. Help navigating tools and changes. Long term access to the system.
             </p>
-            <p className="text-xs italic opacity-40">Depth, scope, and frequency are always discussed clearly. Nothing is hidden. Nothing is forced.</p>
+            <p className="text-xs italic mb-0 text-zinc-900" style={{ color: '#111827' }}>Depth, scope, and frequency are always discussed clearly. Nothing is hidden. Nothing is forced.</p>
           </div>
         </div>
       </section>
