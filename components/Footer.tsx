@@ -16,9 +16,9 @@ export default function Footer({ showContact = true }: FooterProps) {
 
         {/* Three Column Section */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '3rem', marginBottom: '3rem', borderBottom: '1px solid rgba(255, 255, 255, 0.1)', paddingBottom: '3rem' }}>
-          {/* Left Column: Modern Murmurations */}
+          {/* Left Column: Moderate Murmurations */}
           <div>
-            <h3 style={{ fontSize: '1rem', fontWeight: 'bold', margin: '0 0 1.5rem 0', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Modern Murmurations</h3>
+            <h3 style={{ fontSize: '1rem', fontWeight: 'bold', margin: '0 0 1.5rem 0', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Moderate Murmurations</h3>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
               <li style={{ marginBottom: '0.875rem' }}><a href="https://share.google/oD6p99dT0xtdvZYb4" target="_blank" rel="noopener noreferrer" style={{ color: '#ffffff', textDecoration: 'none', opacity: 0.7, transition: 'opacity 200ms' }} onMouseEnter={(e) => e.currentTarget.style.opacity = '1'} onMouseLeave={(e) => e.currentTarget.style.opacity = '0.7'}>Google</a></li>
               <li style={{ marginBottom: '0.875rem' }}><a href="https://www.instagram.com/moderate_murmurations?igsh=MWFzdG5yZWJjdzRmcA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" style={{ color: '#ffffff', textDecoration: 'none', opacity: 0.7, transition: 'opacity 200ms' }} onMouseEnter={(e) => e.currentTarget.style.opacity = '1'} onMouseLeave={(e) => e.currentTarget.style.opacity = '0.7'}>Instagram</a></li>
