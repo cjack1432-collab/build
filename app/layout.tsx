@@ -78,9 +78,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             }}
           >
             <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <h1 style={{ margin: 0 }} className="font-serif">
-                DCFB Wellness
-              </h1>
+              <div>
+                <h1 style={{ margin: 0 }} className="font-serif">
+                  DCFB Wellness
+                </h1>
+                <p style={{ margin: '0.25rem 0 0 0', fontSize: '0.875rem', fontStyle: 'italic', fontWeight: 300 }} className="font-serif">
+                  Moderate Murmurations
+                </p>
+              </div>
             </Link>
             <nav aria-label="Primary">
               <ul style={{ display: 'flex', gap: '1rem', listStyle: 'none', margin: 0, padding: 0 }}>
