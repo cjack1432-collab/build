@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import MurmurDivider from '@/components/MurmurDivider'
 
 export default function Home() {
   return (
@@ -57,6 +58,8 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      <MurmurDivider />
 
       <section className="py-32">
         <div className="container-custom max-w-3xl text-center mx-auto">
