@@ -46,6 +46,20 @@ export default function Home() {
 
       <section className="py-32">
         <div className="container-custom max-w-3xl text-center mx-auto">
+          <h4 className="text-lg font-semibold mb-4">Systems That Breathe</h4>
+          <p className="text-base opacity-75 leading-relaxed mb-12">
+            Real calm doesn't come from buying the right tool. It comes from understanding what you're building and why. A calm system spans front end and back end—the parts people see and the infrastructure they depend on. It means your website doesn't slow you down, your workflows don't pile up, and your AI doesn't become another source of friction. We treat AI as what it is: a tool that amplifies clarity or chaos depending on how you structure it. Our job is to help you build systems where clarity wins.
+          </p>
+
+          <h4 className="text-lg font-semibold mt-8 mb-4">The Business Side of Calm</h4>
+          <p className="text-base opacity-75 leading-relaxed mb-3">
+            Systems that last require more than good intentions. They need structure. That means your business presence is consistent, your digital legitimacy is clear, and your operations have enough separation and organization that you can actually think. It's the difference between having a website and having a system that works for you instead of against you. It's usually invisible work—nobody sees the time you saved because something was organized well. But you do. And that's where calm actually lives.
+          </p>
+        </div>
+      </section>
+
+      <section className="py-32">
+        <div className="container-custom max-w-3xl text-center mx-auto">
           <h4 className="text-lg font-semibold mb-4">AI Optimization and Execution</h4>
           <p className="text-base opacity-75 leading-relaxed mb-12">
             Whether you are brand new to websites, landing pages, or social media, or you are ready to tighten up your systems at an intermediate or advanced level, DCFB Wellness helps Dallas Fort Worth teams build clean, repeatable workflows that actually get used. We focus on AI optimization and implementation, including how to communicate with ChatGPT with clarity, how to structure prompts, and how to organize your conversations and assets so your results stay consistent over time. The goal is simple: less guesswork, faster execution, and a system you can keep improving.
