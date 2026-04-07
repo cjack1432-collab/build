@@ -80,10 +80,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div>
                 <h1 style={{ margin: 0 }} className="font-serif">
-                  DCFB Wellness
+                  Moderate Murmurations
                 </h1>
                 <p style={{ margin: '0.25rem 0 0 0', fontSize: '0.875rem', fontStyle: 'italic', fontWeight: 300 }} className="font-serif">
-                  Moderate Murmurations
+                  DCFB Wellness
                 </p>
               </div>
             </Link>
