@@ -3,21 +3,21 @@ import Link from 'next/link'
 import Footer from '../components/FooterWrapper'
 import { Metadata } from 'next'
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://moderatemurmurations.com'
 
 export const metadata: Metadata = {
-  title: 'DCFB Wellness',
-  description: 'DCFB Wellness services for scheduling, mobility, meditation, and nervous system regulation.',
+  title: 'Moderate Murmurations | Calm Business Systems',
+  description: 'Moderate Murmurations helps individuals and businesses find clarity through organization, wellness, and technical foundations that actually work.',
   metadataBase: new URL(baseUrl),
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: 'DCFB Wellness',
-    description: 'DCFB Wellness services for scheduling, mobility, meditation, and nervous system regulation.',
+    title: 'Moderate Murmurations | Calm Business Systems',
+    description: 'Moderate Murmurations helps individuals and businesses find clarity through organization, wellness, and technical foundations that actually work.',
     url: baseUrl,
-    siteName: 'DCFB Wellness',
+    siteName: 'Moderate Murmurations',
     images: [
       {
         url: `${baseUrl}/og.png`,
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'DCFB Wellness',
-    description: 'DCFB Wellness services for scheduling, mobility, meditation, and nervous system regulation.',
+    title: 'Moderate Murmurations | Calm Business Systems',
+    description: 'Moderate Murmurations helps individuals and businesses find clarity through organization, wellness, and technical foundations that actually work.',
     images: [`${baseUrl}/og.png`],
   },
 }
@@ -39,7 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'DCFB Wellness',
+    name: 'Moderate Murmurations',
     url: baseUrl,
     sameAs: [
       'https://www.linkedin.com/in/chris-jackson143/',
@@ -80,10 +80,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div>
                 <h1 style={{ margin: 0 }} className="font-serif">
-                  DCFB Wellness
+                  Moderate Murmurations
                 </h1>
                 <p style={{ margin: '0.25rem 0 0 0', fontSize: '0.875rem', fontStyle: 'italic', fontWeight: 300 }} className="font-serif">
-                  Moderate Murmurations
+                  DCFB Wellness
                 </p>
               </div>
             </Link>
