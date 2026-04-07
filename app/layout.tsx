@@ -3,24 +3,27 @@ import Link from 'next/link'
 import Footer from '../components/FooterWrapper'
 import { Metadata } from 'next'
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://moderatemurmurations.com'
 
 export const metadata: Metadata = {
-  title: 'DCFB Wellness | Systems for a Calm Life',
-  description: 'Build calm systems for your business and life. Website development, AI workflows, and business infrastructure for Dallas Fort Worth.',
-  metadataBase: new URL(baseUrl),
+  title: 'Moderate Murmurations | Calm Business Systems',
+  description: 'Moderate Murmurations and DCFB Wellness help individuals and businesses build calm, organized systems — websites, AI workflows, and digital infrastructure that actually work.',
+  metadataBase: new URL('https://moderatemurmurations.com'),
   robots: {
     index: true,
     follow: true,
   },
+  alternates: {
+    canonical: 'https://moderatemurmurations.com/',
+  },
   openGraph: {
-    title: 'DCFB Wellness | Systems for a Calm Life',
-    description: 'Build calm systems for your business and life. Website development, AI workflows, and business infrastructure for Dallas Fort Worth.',
-    url: baseUrl,
-    siteName: 'DCFB Wellness',
+    title: 'Moderate Murmurations | Calm Business Systems',
+    description: 'Moderate Murmurations and DCFB Wellness help individuals and businesses build calm, organized systems — websites, AI workflows, and digital infrastructure that actually work.',
+    url: 'https://moderatemurmurations.com/',
+    siteName: 'Moderate Murmurations',
     images: [
       {
-        url: `${baseUrl}/og.png`,
+        url: 'https://moderatemurmurations.com/og.png',
         width: 1200,
         height: 630,
       },
@@ -29,9 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'DCFB Wellness | Systems for a Calm Life',
-    description: 'Build calm systems for your business and life. Website development, AI workflows, and business infrastructure for Dallas Fort Worth.',
-    images: [`${baseUrl}/og.png`],
+    title: 'Moderate Murmurations | Calm Business Systems',
+    description: 'Moderate Murmurations and DCFB Wellness help individuals and businesses build calm, organized systems — websites, AI workflows, and digital infrastructure that actually work.',
+    images: ['https://moderatemurmurations.com/og.png'],
   },
 }
 
@@ -58,7 +61,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
-        <link rel="canonical" href={baseUrl} />
+        <link rel="canonical" href="https://moderatemurmurations.com/" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
@@ -80,10 +83,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div>
                 <h1 style={{ margin: 0 }} className="font-serif">
-                  DCFB Wellness
+                  Moderate Murmurations
                 </h1>
                 <p style={{ margin: '0.25rem 0 0 0', fontSize: '0.875rem', fontWeight: 300, fontStyle: 'italic', opacity: 0.6 }} className="font-serif">
-                  Moderate Murmurations
+                  DCFB Wellness
                 </p>
               </div>
             </Link>

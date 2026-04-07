@@ -5,9 +5,9 @@ export default function Home() {
   return (
     <div className="animate-in fade-in duration-700">
       <section className="container-custom py-24 md:py-40 flex flex-col items-center text-center">
-        <h1 className="text-5xl md:text-7xl font-serif mb-8 max-w-4xl leading-tight">
+        <h2 className="text-5xl md:text-7xl font-serif mb-8 max-w-4xl leading-tight">
           Systems for a <span className="italic">Calm</span> Life.
-        </h1>
+        </h2>
         <p className="text-lg md:text-xl max-w-2xl opacity-70 leading-relaxed mb-12">
           We help individuals and businesses find clarity through organization, 
           wellness, and technical foundations that actually work.
