@@ -60,7 +60,8 @@ export default function Home() {
 
       <div className="w-full">
         <img 
-          src="/murmuration_top_trimmed.webp" 
+          src="/murmur-strip-1x.webp" 
+          srcSet="/murmur-strip-1x.webp 1x, /murmur-strip-2x.webp 2x"
           alt="Murmuration" 
           style={{ width: '100%', height: 'auto', display: 'block' }}
         />
