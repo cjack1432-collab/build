@@ -58,6 +58,14 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="w-full">
+        <img 
+          src="/murmuration_top_trimmed.webp" 
+          alt="Murmuration" 
+          style={{ width: '100%', height: 'auto', display: 'block' }}
+        />
+      </div>
+
       <section className="py-32 bg-white border-y border-gray-100">
         <div className="container-custom max-w-3xl text-center mx-auto">
           <h4 className="text-lg font-semibold mb-4">AI Optimization and Execution</h4>
