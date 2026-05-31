@@ -1,13 +1,10 @@
- 'use client'
-
- import LightboxImage from './LightboxImage'
+  'use client'
 
  type FooterProps = {
    showContact?: boolean
-   showHomepageAccent?: boolean
  }
 
- export default function Footer({ showContact = true, showHomepageAccent = false }: FooterProps) {
+ export default function Footer({ showContact = true }: FooterProps) {
    return (
      <footer style={{ backgroundColor: '#1a1a1a', color: '#ffffff', padding: '3rem 0' }}>
        <div className="container-custom">
@@ -58,22 +55,6 @@
             </ul>
           </div>
         </div>
-
-        {showHomepageAccent && (
-          <div style={{ marginBottom: '1.5rem', display: 'flex', justifyContent: 'flex-start' }}>
-            <div style={{ width: 'min(180px, 22vw)', height: '90px', overflow: 'hidden', opacity: 0.7, flexShrink: 0 }}>
-              <LightboxImage
-                src="/images/moderate-murmurations-hero.webp"
-                alt="Moderate Murmurations visual accent representing calm systems and organized infrastructure."
-                width={1536}
-                height={1024}
-                sizes="180px"
-                className="block w-full h-full"
-                imageClassName="block w-full h-full object-contain"
-              />
-            </div>
-          </div>
-        )}
 
         {/* Contact Section (conditionally shown) */}
         {showContact && (

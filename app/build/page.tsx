@@ -113,9 +113,10 @@ export default function Build() {
               </button>
             </div>
           </div>
-          <div className="w-full justify-self-end" style={{ maxWidth: '520px' }}>
+          <div className="w-full justify-self-end" style={{ maxWidth: '460px' }}>
             <div
               className="overflow-hidden bg-[#edece7] shadow-[0_16px_34px_rgba(0,0,0,0.14)]"
+              style={{ aspectRatio: '3 / 2' }}
             >
               <LightboxImage
                 src="/images/build-hero-chatgpt.png"
@@ -123,9 +124,10 @@ export default function Build() {
                 width={1536}
                 height={1024}
                 priority
-                sizes="(min-width: 768px) 46vw, 100vw"
-                className="block w-full"
-                imageClassName="block h-auto w-full object-contain"
+                sizes="(min-width: 768px) 460px, 100vw"
+                className="block w-full h-full"
+                imageClassName="block h-full w-full object-cover"
+                imageStyle={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
             </div>
           </div>
