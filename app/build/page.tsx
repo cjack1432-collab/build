@@ -2,7 +2,6 @@
 
 import React, { useRef } from 'react'
 import SystemAuditor from '../../components/SystemAuditor'
-import MurmurDivider from '../../components/MurmurDivider'
 
 export default function Build() {
   const auditorRef = useRef<HTMLDivElement>(null)
@@ -114,14 +113,24 @@ export default function Build() {
             </div>
           </div>
           <div className="hidden md:block">
-            <img
-              src="/images/moderate-murmurations-hero.webp"
-              srcSet="/images/moderate-murmurations-hero.webp 1x, /images/moderate-murmurations-hero@2x.webp 2x"
-              alt="Black and white murmuration pattern representing organized movement and business clarity."
-              loading="eager"
-              decoding="async"
-              style={{ width: '100%', height: 'auto', display: 'block', opacity: 0.85 }}
-            />
+            <div style={{ overflow: 'hidden', height: 'clamp(160px, 20vw, 280px)' }}>
+              <img
+                src="/images/moderate-murmurations-hero.webp"
+                srcSet="/images/moderate-murmurations-hero.webp 1x, /images/moderate-murmurations-hero@2x.webp 2x"
+                alt="Black and white murmuration pattern representing organized movement and business clarity."
+                loading="eager"
+                decoding="async"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  display: 'block',
+                  opacity: 0.85,
+                  objectFit: 'cover',
+                  objectPosition: 'center',
+                  transform: 'scaleX(1.9)',
+                }}
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -215,19 +224,14 @@ export default function Build() {
 
       {/* SYSTEMS THAT BREATHE */}
       <section className="container-custom py-24">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-3xl font-serif mb-6">Systems That Breathe</h2>
-            <p className="text-base opacity-75 leading-relaxed mb-8">
-              A calm system is not just a nice website. It is the visible front end and the invisible back end working together: accounts, links, workflows, files, content, tools, and decisions organized well enough that the business can move without constant friction.
-            </p>
-            <a href={consultationLink} className="cta-primary uppercase tracking-widest text-xs font-bold">
-              Start A Conversation
-            </a>
-          </div>
-          <div>
-            <MurmurDivider alt="Moderate Murmurations visual representing calm systems and organized infrastructure." />
-          </div>
+        <div className="max-w-3xl">
+          <h2 className="text-3xl font-serif mb-6">Systems That Breathe</h2>
+          <p className="text-base opacity-75 leading-relaxed mb-8">
+            A calm system is not just a nice website. It is the visible front end and the invisible back end working together: accounts, links, workflows, files, content, tools, and decisions organized well enough that the business can move without constant friction.
+          </p>
+          <a href={consultationLink} className="cta-primary uppercase tracking-widest text-xs font-bold">
+            Start A Conversation
+          </a>
         </div>
       </section>
 
