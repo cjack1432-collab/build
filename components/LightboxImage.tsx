@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import type { CSSProperties } from 'react'
 
 type LightboxImageProps = {
   src: string
@@ -10,6 +11,7 @@ type LightboxImageProps = {
   height: number
   className?: string
   imageClassName?: string
+  imageStyle?: CSSProperties
   priority?: boolean
   sizes?: string
 }
@@ -21,6 +23,7 @@ export default function LightboxImage({
   height,
   className,
   imageClassName,
+  imageStyle,
   priority = false,
   sizes,
 }: LightboxImageProps) {
@@ -62,6 +65,7 @@ export default function LightboxImage({
           priority={priority}
           sizes={sizes}
           className={imageClassName}
+          style={imageStyle}
         />
       </button>
 

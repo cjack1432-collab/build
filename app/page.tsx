@@ -147,6 +147,8 @@ export default function Home() {
               backgroundColor: '#f8f6f1',
               padding: '0.75rem',
               boxShadow: '0 18px 35px rgba(0, 0, 0, 0.08)',
+              aspectRatio: '1 / 1',
+              overflow: 'hidden',
             }}
           >
             <LightboxImage
@@ -155,8 +157,9 @@ export default function Home() {
               width={1254}
               height={1254}
               sizes="(min-width: 1024px) 50vw, 100vw"
-              className="block w-full"
-              imageClassName="block h-auto w-full object-contain cursor-zoom-in"
+              className="block w-full h-full"
+              imageClassName="block w-full h-full cursor-zoom-in"
+              imageStyle={{ width: '100%', height: '100%', objectFit: 'cover' }}
             />
           </div>
         </div>
@@ -269,15 +272,16 @@ export default function Home() {
                     {resource.title}
                   </h3>
                   {resource.image && (
-                    <div style={{ width: '132px', flexShrink: 0 }}>
+                    <div style={{ width: '132px', height: '132px', flexShrink: 0, overflow: 'hidden' }}>
                       <LightboxImage
                         src={resource.image}
                         alt={resource.imageAlt || resource.title}
                         width={1254}
                         height={1254}
                         sizes="132px"
-                        className="block w-full"
-                        imageClassName="block h-[132px] w-full object-contain"
+                        className="block w-full h-full"
+                        imageClassName="block w-full h-full"
+                        imageStyle={{ width: '100%', height: '100%', objectFit: 'cover' }}
                       />
                     </div>
                   )}
