@@ -142,7 +142,7 @@ export default function Home() {
             </div>
           </div>
           <div
-            className="mx-auto w-full max-w-[260px] md:max-w-[300px] lg:max-w-[320px]"
+            className="mx-auto w-full"
             style={{
               backgroundColor: '#f8f6f1',
               padding: '0.75rem',
@@ -154,7 +154,7 @@ export default function Home() {
               alt="AI as Modern Cognitive Leverage guide cover by Moderate Murmurations."
               width={1254}
               height={1254}
-              sizes="(min-width: 1024px) 320px, (min-width: 768px) 300px, 260px"
+              sizes="(min-width: 1024px) 50vw, 100vw"
               className="block w-full"
               imageClassName="block h-auto w-full object-contain cursor-zoom-in"
             />
