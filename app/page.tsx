@@ -1,7 +1,6 @@
-import MurmurDivider from '@/components/MurmurDivider'
-
 export default function Home() {
-  const consultationLink = 'mailto:mrnamaslay@gmail.com?subject=Free%20Consultation%20%E2%80%93%20Moderate%20Murmurations'
+  const consultationLink = 'mailto:mrnamaslay@gmail.com?subject=Free%20Launch%20Consultation%20%E2%80%93%20Moderate%20Murmurations'
+  const walkthroughLink = 'mailto:mrnamaslay@gmail.com?subject=AI%20Guide%20Walkthrough%20%E2%80%93%20Moderate%20Murmurations'
   const aiGuideLink = '/resources/ai-as-modern-cognitive-leverage.pdf'
   const businessReadinessGuideLink = '/resources/dallas-world-cup-business-readiness-field-guide.pdf'
 
@@ -25,28 +24,29 @@ export default function Home() {
     'Book a complimentary consultation',
     'Review your business, idea, or current digital setup',
     'Identify the highest-friction areas',
+    'Leave with clearer next steps',
     'Decide whether a paid implementation path makes sense',
   ]
 
   const resources = [
     {
-      title: 'AI as Modern Cognitive Leverage',
+      title: 'Dallas World Cup Business Readiness Field Guide',
       description:
-        'A public primer created by Moderate Murmurations to help beginners, business owners, wellness practitioners, hospitality professionals, creators, and operators understand AI as practical cognitive leverage.',
-      href: aiGuideLink,
-      label: 'Download AI Guide',
+        'A business-facing readiness resource built to help Dallas and Arlington visitor-facing businesses prepare for major-event traffic, offers, QR systems, visibility, and local activation opportunities.',
+      href: businessReadinessGuideLink,
+      label: 'View Business Readiness Guide',
       external: false,
-      download: true,
+      download: false,
       image: null,
       imageAlt: '',
     },
     {
-      title: 'Dallas World Cup Business Readiness Field Guide',
+      title: 'Dallas World Cup Survival Map',
       description:
-        'A business readiness resource built for Dallas and Arlington visitor-facing businesses preparing for major-event traffic, local visibility, QR systems, offer planning, and activation opportunities. This is an independent resource and is not affiliated with FIFA, the FIFA World Cup 2026, AT&T Stadium, Fair Park, or any official tournament entity.',
-      href: businessReadinessGuideLink,
-      label: 'View Business Readiness Guide',
-      external: false,
+        'Move Through Dallas Like You\'ve Already Been There. This published resource connects to the broader readiness ecosystem. The Business Readiness Field Guide helps businesses prepare. The Survival Map supports the visitor side of the same Dallas event-readiness ecosystem.',
+      href: 'https://a.co/d/0aDUwZl5',
+      label: 'View Published Book On Amazon',
+      external: true,
       download: false,
       image: null,
       imageAlt: '',
@@ -60,23 +60,12 @@ export default function Home() {
       external: true,
       download: false,
       image: '/images/frequentsee-h2o-logo.png',
-      imageAlt: 'FreQuent SEE H2O logo',
-    },
-    {
-      title: 'Published Resource',
-      description:
-        'A published resource connected to the broader DCFB Wellness and Moderate Murmurations ecosystem.',
-      href: 'https://a.co/d/0aDUwZl5',
-      label: 'View Published Book On Amazon',
-      external: true,
-      download: false,
-      image: null,
-      imageAlt: '',
+      imageAlt: 'FreQuent SEE H2O logo used as a live launch example.',
     },
     {
       title: 'DCFB Wellness Ecosystem',
       description:
-        'Moderate Murmurations operates within the broader DCFB Wellness ecosystem, connecting wellness, hospitality, consulting, business readiness, and AI-assisted systems work.',
+        'Moderate Murmurations operates inside the broader DCFB Wellness ecosystem, connecting wellness, hospitality, consulting, business readiness, and AI-assisted systems work.',
       href: 'https://dcfbwellness.com',
       label: 'Visit DCFB Wellness',
       external: true,
@@ -106,28 +95,28 @@ export default function Home() {
 
   return (
     <div className="animate-in fade-in duration-700">
+      {/* HERO */}
       <section className="container-custom py-24 md:py-40 flex flex-col items-center text-center">
         <h1 className="text-5xl md:text-7xl font-serif mb-8 max-w-4xl leading-tight">
-          Launch Your Business Online With More Clarity
+          Launch Your Business Online In Days, Not Weeks
         </h1>
         <p className="text-lg md:text-xl max-w-2xl opacity-70 leading-relaxed mb-12">
-          Moderate Murmurations helps small businesses, founders, and operators turn scattered ideas into websites, AI workflows, digital resources, and practical business infrastructure.
+          Moderate Murmurations helps small businesses and operators turn scattered ideas into websites, AI workflows, digital resources, and business infrastructure that actually works.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <a href={aiGuideLink} download className="cta-primary text-center tracking-wide uppercase text-sm font-semibold">
-            Download Free AI Guide
+          <a href={consultationLink} className="cta-primary text-center tracking-wide uppercase text-sm font-semibold">
+            Book Free Launch Consultation
           </a>
-          <a href={consultationLink} className="cta-secondary text-center tracking-wide uppercase text-sm font-semibold">
-            Book Free Consultation
+          <a href={aiGuideLink} download className="cta-secondary text-center tracking-wide uppercase text-sm font-semibold">
+            Download Free AI Guide
           </a>
         </div>
         <p className="text-sm opacity-60 leading-relaxed mt-6 max-w-2xl">
-          Start with the guide. Then book a complimentary consultation to identify what your business actually needs.
+          Start with a free conversation. Leave with clearer next steps.
         </p>
       </section>
 
-      <MurmurDivider />
-
+      {/* FREE AI GUIDE */}
       <section className="py-32 border-y">
         <div className="container-custom grid md:grid-cols-2 gap-12 items-center">
           <div>
@@ -138,9 +127,6 @@ export default function Home() {
             <p className="text-base opacity-75 leading-relaxed mb-6">
               A beginner-friendly orientation for reducing friction, organizing thought, and using AI with better judgment.
             </p>
-            <p className="text-base opacity-75 leading-relaxed mb-6">
-              This guide is the entry point for people who are curious about AI but do not want more noise, jargon, or tools they do not understand.
-            </p>
             <p className="text-base opacity-75 leading-relaxed mb-12">
               Most people do not need more tools first. They need less confusion. This guide explains how AI can help organize ideas, clarify communication, build reusable systems, and turn scattered thoughts into practical next steps.
             </p>
@@ -148,29 +134,28 @@ export default function Home() {
               <a href={aiGuideLink} download className="cta-primary text-center tracking-wide uppercase text-sm font-semibold">
                 Download The Free Guide
               </a>
-              <a href={consultationLink} className="cta-secondary text-center tracking-wide uppercase text-sm font-semibold">
-                Schedule A Free Walkthrough
+              <a href={walkthroughLink} className="cta-secondary text-center tracking-wide uppercase text-sm font-semibold">
+                Schedule A Walkthrough
               </a>
             </div>
           </div>
-          <div>
+          <div style={{ backgroundColor: '#faf9f6' }}>
             <img
               src="/images/ai-modern-cognitive-leverage-cover.webp"
-              alt="AI as Modern Cognitive Leverage guide cover with abstract butterfly and dandelion artwork."
+              alt="AI as Modern Cognitive Leverage guide cover by Moderate Murmurations."
               loading="lazy"
               decoding="async"
               style={{
                 width: '100%',
                 height: 'auto',
                 display: 'block',
-                border: '1px solid #e6e9ef',
-                backgroundColor: '#ffffff',
               }}
             />
           </div>
         </div>
       </section>
 
+      {/* WHAT WE ACTUALLY BUILD */}
       <section className="bg-white py-32 border-b">
         <div className="container-custom">
           <div className="max-w-3xl mb-12">
@@ -200,12 +185,16 @@ export default function Home() {
         </div>
       </section>
 
+      {/* START FREE */}
       <section className="py-32">
         <div className="container-custom max-w-3xl mx-auto">
           <div className="text-center">
             <h2 className="text-4xl font-serif mb-6">Start Free. Build With Intention.</h2>
             <p className="text-base opacity-75 leading-relaxed mb-6">
-              The first conversation is complimentary. The goal is not to sell unnecessary tools. The goal is to identify where your business is losing time, clarity, visibility, or momentum.
+              The first conversation is complimentary. We use it to look at your business, your idea, or your current digital setup and identify what is actually creating friction.
+            </p>
+            <p className="text-base opacity-75 leading-relaxed mb-6">
+              The goal is not to sell unnecessary tools. The goal is to understand what needs to be clarified, built, cleaned up, or connected.
             </p>
             <p className="text-base font-semibold mb-12">
               Information first. Trust first. Implementation second.
@@ -216,6 +205,7 @@ export default function Home() {
               border: '1px solid #e6e9ef',
               backgroundColor: '#ffffff',
               padding: '2rem',
+              marginBottom: '2rem',
             }}
           >
             {processSteps.map((step, index) => (
@@ -237,9 +227,18 @@ export default function Home() {
               </div>
             ))}
           </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={consultationLink} className="cta-primary text-center tracking-wide uppercase text-sm font-semibold">
+              Book Free Consultation
+            </a>
+            <a href="/build" className="cta-secondary text-center tracking-wide uppercase text-sm font-semibold">
+              View Build Options
+            </a>
+          </div>
         </div>
       </section>
 
+      {/* BUILT RESOURCES AND LIVE EXAMPLES */}
       <section className="bg-white py-32 border-y">
         <div className="container-custom">
           <div className="max-w-3xl mb-12">
@@ -258,20 +257,24 @@ export default function Home() {
                   backgroundColor: '#faf9f6',
                 }}
               >
-                {resource.image && (
-                  <img
-                    src={resource.image}
-                    alt={resource.imageAlt || resource.title}
-                    style={{ width: '80px', height: '80px', objectFit: 'contain', marginBottom: '1rem' }}
-                  />
-                )}
-                <h3 className="text-xl font-serif mb-4">{resource.title}</h3>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1rem' }}>
+                  <h3 className="text-xl font-serif" style={{ flex: 1, paddingRight: resource.image ? '1rem' : '0' }}>
+                    {resource.title}
+                  </h3>
+                  {resource.image && (
+                    <img
+                      src={resource.image}
+                      alt={resource.imageAlt || resource.title}
+                      style={{ width: '100px', height: '100px', objectFit: 'contain', flexShrink: 0 }}
+                    />
+                  )}
+                </div>
                 <p className="text-sm opacity-75 leading-relaxed mb-8">{resource.description}</p>
                 <a
                   href={resource.href}
                   className="cta-secondary text-center tracking-wide uppercase text-sm font-semibold"
                   target={resource.external ? '_blank' : undefined}
-                  rel={resource.external ? 'noreferrer' : undefined}
+                  rel={resource.external ? 'noopener noreferrer' : undefined}
                   download={resource.download || undefined}
                 >
                   {resource.label}
@@ -279,15 +282,19 @@ export default function Home() {
               </article>
             ))}
           </div>
+          <p className="text-xs opacity-50 leading-relaxed mt-10 max-w-3xl">
+            This is an independent business readiness and visitor guidance resource. It is not affiliated with, endorsed by, sponsored by, or officially connected to FIFA, FIFA World Cup 2026, AT&amp;T Stadium, Fair Park, or any official tournament entity. All trademarks belong to their respective owners.
+          </p>
         </div>
       </section>
 
+      {/* WAYS TO WORK TOGETHER */}
       <section className="py-32">
         <div className="container-custom">
           <div className="max-w-3xl mb-12">
             <h2 className="text-4xl font-serif mb-6">Ways To Work Together</h2>
             <p className="text-base opacity-75 leading-relaxed">
-              Moderate Murmurations starts with a free conversation, then scopes the work around the actual need.
+              Moderate Murmurations starts with a free conversation and scopes the work around actual need.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -312,18 +319,19 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FINAL CTA */}
       <section className="bg-white py-32 border-y">
         <div className="container-custom max-w-3xl text-center mx-auto">
-          <h2 className="text-4xl font-serif mb-6">Ready To Reduce The Confusion?</h2>
+          <h2 className="text-4xl font-serif mb-6">Ready To Launch Cleaner?</h2>
           <p className="text-base opacity-75 leading-relaxed mb-12">
-            Start with the free guide. Then book a complimentary consultation and we will identify what your business actually needs before anything gets built.
+            Start with the free guide, or book a complimentary consultation and we will identify what your business actually needs before anything gets built.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={aiGuideLink} download className="cta-primary text-center tracking-wide uppercase text-sm font-semibold">
-              Download Free AI Guide
-            </a>
-            <a href={consultationLink} className="cta-secondary text-center tracking-wide uppercase text-sm font-semibold">
+            <a href={consultationLink} className="cta-primary text-center tracking-wide uppercase text-sm font-semibold">
               Book Free Consultation
+            </a>
+            <a href={aiGuideLink} download className="cta-secondary text-center tracking-wide uppercase text-sm font-semibold">
+              Download Free AI Guide
             </a>
           </div>
         </div>

@@ -7,7 +7,7 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
 
 export const metadata: Metadata = {
   title: 'Moderate Murmurations | Business Launch Architecture and AI Workflow Consulting',
-  description: 'Business launch architecture, AI workflow consulting, digital resources, websites, Google visibility guidance, and practical business infrastructure for founders, operators, wellness professionals, hospitality businesses, and local service businesses.',
+  description: 'Business launch architecture, AI workflow consulting, websites, digital resources, Google visibility guidance, and practical business infrastructure for small businesses, founders, wellness professionals, hospitality operators, and local service businesses.',
   keywords: [
     'business launch architecture',
     'AI workflow consulting',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Moderate Murmurations | Business Launch Architecture and AI Workflow Consulting',
-    description: 'Business launch architecture, AI workflow consulting, digital resources, websites, Google visibility guidance, and practical business infrastructure for founders, operators, wellness professionals, hospitality businesses, and local service businesses.',
+    description: 'Business launch architecture, AI workflow consulting, websites, digital resources, Google visibility guidance, and practical business infrastructure for small businesses, founders, wellness professionals, hospitality operators, and local service businesses.',
     url: baseUrl,
     siteName: 'Moderate Murmurations',
     images: [
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Moderate Murmurations | Business Launch Architecture and AI Workflow Consulting',
-    description: 'Business launch architecture, AI workflow consulting, digital resources, websites, Google visibility guidance, and practical business infrastructure for founders, operators, wellness professionals, hospitality businesses, and local service businesses.',
+    description: 'Business launch architecture, AI workflow consulting, websites, digital resources, Google visibility guidance, and practical business infrastructure for small businesses, founders, wellness professionals, hospitality operators, and local service businesses.',
     images: [`${baseUrl}/og.png`],
   },
 }
@@ -50,10 +50,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const organizationSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
+    '@type': 'ProfessionalService',
     name: 'Moderate Murmurations',
     alternateName: 'DCFB Wellness',
     url: baseUrl,
+    description: 'Business launch architecture, AI workflow consulting, websites, digital resources, and practical business infrastructure for small businesses, founders, wellness professionals, and local service businesses.',
     sameAs: [
       'https://www.linkedin.com/in/chris-jackson143/',
       'https://mrnamaslay.com',
@@ -64,12 +65,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     ],
   }
 
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Moderate Murmurations',
+    url: baseUrl,
+  }
+
   return (
     <html lang="en">
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
         <link rel="canonical" href={baseUrl} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
