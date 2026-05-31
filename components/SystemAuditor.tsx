@@ -20,7 +20,9 @@ const SystemAuditor: React.FC = () => {
       `Business Name: ${form.businessName}\n\nWebsite or Current Links: ${form.websiteLinks}\n\nMain Frustration: ${form.mainFrustration}\n\nImmediate Goal: ${form.immediateGoal}\n\nBest Contact Method: ${form.contactMethod}`
     )
 
-    window.location.href = `mailto:mrnamaslay@gmail.com?subject=${subject}&body=${body}`
+    const mailtoLink = document.createElement('a')
+    mailtoLink.href = `mailto:mrnamaslay@gmail.com?subject=${subject}&body=${body}`
+    mailtoLink.click()
     setSubmitted(true)
   }
 
