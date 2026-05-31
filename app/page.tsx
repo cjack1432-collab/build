@@ -142,13 +142,11 @@ export default function Home() {
             </div>
           </div>
           <div
+            className="mx-auto w-full max-w-[260px] md:max-w-[300px] lg:max-w-[320px]"
             style={{
               backgroundColor: '#f8f6f1',
               padding: '0.75rem',
               boxShadow: '0 18px 35px rgba(0, 0, 0, 0.08)',
-              maxWidth: '420px',
-              marginLeft: 'auto',
-              marginRight: 'auto',
             }}
           >
             <LightboxImage
@@ -156,9 +154,9 @@ export default function Home() {
               alt="AI as Modern Cognitive Leverage guide cover by Moderate Murmurations."
               width={1254}
               height={1254}
-              sizes="(min-width: 768px) 42vw, 100vw"
+              sizes="(min-width: 1024px) 320px, (min-width: 768px) 300px, 260px"
               className="block w-full"
-              imageClassName="block h-auto w-full object-contain"
+              imageClassName="block h-auto w-full object-contain cursor-zoom-in"
             />
           </div>
         </div>
