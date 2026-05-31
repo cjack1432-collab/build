@@ -38,12 +38,11 @@ export default function LightboxImage({
       }
     }
 
-    const previousOverflow = document.body.style.overflow
     document.body.style.overflow = 'hidden'
     document.addEventListener('keydown', onEscape)
 
     return () => {
-      document.body.style.overflow = previousOverflow
+      document.body.style.overflow = ''
       document.removeEventListener('keydown', onEscape)
     }
   }, [isOpen])
@@ -75,28 +74,60 @@ export default function LightboxImage({
           aria-modal="true"
           aria-label={`Image preview: ${alt}`}
           onClick={() => setIsOpen(false)}
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/85 p-4 md:p-8"
-          style={{ cursor: 'zoom-out' }}
+          style={{
+            position: 'fixed',
+            inset: 0,
+            zIndex: 9999,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: 'rgba(0, 0, 0, 0.85)',
+            padding: '1rem',
+            cursor: 'zoom-out',
+          }}
         >
           <button
             type="button"
             onClick={() => setIsOpen(false)}
             aria-label="Close image preview"
-            className="absolute right-4 top-4 rounded border border-white/30 px-3 py-2 text-xs font-semibold uppercase tracking-wider text-white transition hover:bg-white/10"
-            style={{ cursor: 'pointer' }}
+            style={{
+              position: 'absolute',
+              right: '1rem',
+              top: '1rem',
+              background: 'transparent',
+              border: '1px solid rgba(255, 255, 255, 0.3)',
+              borderRadius: '4px',
+              padding: '0.5rem 0.75rem',
+              fontSize: '0.75rem',
+              fontWeight: 600,
+              textTransform: 'uppercase',
+              letterSpacing: '0.05em',
+              color: '#ffffff',
+              cursor: 'pointer',
+              fontFamily: 'inherit',
+            }}
           >
             Close
           </button>
           <div
             onClick={(event) => event.stopPropagation()}
-            className="max-h-[90vh] max-w-[95vw]"
-            style={{ cursor: 'default' }}
+            style={{
+              maxHeight: '90vh',
+              maxWidth: '95vw',
+              cursor: 'default',
+            }}
           >
             <img
               src={src}
               alt={alt}
-              className="max-h-[90vh] max-w-[95vw] object-contain"
-              style={{ width: 'auto', height: 'auto', display: 'block' }}
+              style={{
+                maxHeight: '90vh',
+                maxWidth: '95vw',
+                objectFit: 'contain',
+                width: 'auto',
+                height: 'auto',
+                display: 'block',
+              }}
             />
           </div>
         </div>

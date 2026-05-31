@@ -116,7 +116,6 @@ export default function Build() {
           <div className="w-full justify-self-end" style={{ maxWidth: '520px' }}>
             <div
               className="overflow-hidden bg-[#edece7] shadow-[0_16px_34px_rgba(0,0,0,0.14)]"
-              style={{ aspectRatio: '1 / 1' }}
             >
               <LightboxImage
                 src="/images/build-hero-chatgpt.png"
@@ -125,9 +124,8 @@ export default function Build() {
                 height={1024}
                 priority
                 sizes="(min-width: 768px) 46vw, 100vw"
-                className="block w-full h-full"
-                imageClassName="block w-full h-full"
-                imageStyle={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                className="block w-full"
+                imageClassName="block h-auto w-full object-contain"
               />
             </div>
           </div>
@@ -217,7 +215,7 @@ export default function Build() {
               </div>
             ))}
           </div>
-          <p className="mt-16 text-xs uppercase tracking-[0.3em] font-bold opacity-50">This is operator led, not agency managed.</p>
+          <p style={{ marginTop: '4rem', fontSize: '0.875rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', borderLeft: '3px solid #1a1a1a', paddingLeft: '1rem' }}>This is operator led, not agency managed.</p>
         </div>
       </section>
 

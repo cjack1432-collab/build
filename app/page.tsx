@@ -147,8 +147,6 @@ export default function Home() {
               backgroundColor: '#f8f6f1',
               padding: '0.75rem',
               boxShadow: '0 18px 35px rgba(0, 0, 0, 0.08)',
-              aspectRatio: '1 / 1',
-              overflow: 'hidden',
             }}
           >
             <LightboxImage
@@ -157,9 +155,8 @@ export default function Home() {
               width={1254}
               height={1254}
               sizes="(min-width: 1024px) 50vw, 100vw"
-              className="block w-full h-full"
-              imageClassName="block w-full h-full cursor-zoom-in"
-              imageStyle={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              className="block w-full"
+              imageClassName="block h-auto w-full object-contain cursor-zoom-in"
             />
           </div>
         </div>
@@ -280,7 +277,7 @@ export default function Home() {
                         height={1254}
                         sizes="132px"
                         className="block w-full h-full"
-                        imageClassName="block w-full h-full"
+                        imageClassName="block w-full h-full object-cover"
                         imageStyle={{ width: '100%', height: '100%', objectFit: 'cover' }}
                       />
                     </div>
