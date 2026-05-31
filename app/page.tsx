@@ -37,6 +37,8 @@ export default function Home() {
       label: 'Download AI Guide',
       external: false,
       download: true,
+      image: null,
+      imageAlt: '',
     },
     {
       title: 'Dallas World Cup Business Readiness Field Guide',
@@ -46,6 +48,8 @@ export default function Home() {
       label: 'View Business Readiness Guide',
       external: false,
       download: false,
+      image: null,
+      imageAlt: '',
     },
     {
       title: 'FreQuent SEE H2O',
@@ -55,6 +59,8 @@ export default function Home() {
       label: 'View Live Example',
       external: true,
       download: false,
+      image: '/images/frequentsee-h2o-logo.png',
+      imageAlt: 'FreQuent SEE H2O logo',
     },
     {
       title: 'Published Resource',
@@ -64,6 +70,8 @@ export default function Home() {
       label: 'View Published Book On Amazon',
       external: true,
       download: false,
+      image: null,
+      imageAlt: '',
     },
     {
       title: 'DCFB Wellness Ecosystem',
@@ -73,6 +81,8 @@ export default function Home() {
       label: 'Visit DCFB Wellness',
       external: true,
       download: false,
+      image: null,
+      imageAlt: '',
     },
   ]
 
@@ -248,6 +258,13 @@ export default function Home() {
                   backgroundColor: '#faf9f6',
                 }}
               >
+                {resource.image && (
+                  <img
+                    src={resource.image}
+                    alt={resource.imageAlt || resource.title}
+                    style={{ width: '80px', height: '80px', objectFit: 'contain', marginBottom: '1rem' }}
+                  />
+                )}
                 <h3 className="text-xl font-serif mb-4">{resource.title}</h3>
                 <p className="text-sm opacity-75 leading-relaxed mb-8">{resource.description}</p>
                 <a
