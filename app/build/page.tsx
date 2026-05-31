@@ -113,17 +113,17 @@ export default function Build() {
               </button>
             </div>
           </div>
-          <div className="w-full">
+          <div className="w-full max-w-[520px] justify-self-end">
             <div className="overflow-hidden bg-[#edece7] shadow-[0_16px_34px_rgba(0,0,0,0.14)]">
               <LightboxImage
-                src="/images/build-murmuration-hero.webp"
+                src="/images/build-hero-chatgpt.png"
                 alt="Black and white murmuration pattern representing organized movement and business clarity."
                 width={1536}
                 height={1024}
                 priority
                 sizes="(min-width: 768px) 46vw, 100vw"
                 className="block w-full"
-                imageClassName="block h-[220px] w-full object-cover object-center md:h-[280px]"
+                imageClassName="block w-full h-auto object-contain"
               />
             </div>
           </div>

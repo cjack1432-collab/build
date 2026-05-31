@@ -60,16 +60,16 @@
         </div>
 
         {showHomepageAccent && (
-          <div style={{ marginBottom: '2rem', display: 'flex', justifyContent: 'flex-start' }}>
-            <div style={{ width: 'min(280px, 52vw)', opacity: 0.88 }}>
+          <div style={{ marginBottom: '1.5rem', display: 'flex', justifyContent: 'flex-start' }}>
+            <div style={{ width: 'min(180px, 22vw)', height: '90px', overflow: 'hidden', opacity: 0.7, flexShrink: 0 }}>
               <LightboxImage
                 src="/images/moderate-murmurations-hero.webp"
                 alt="Moderate Murmurations visual accent representing calm systems and organized infrastructure."
                 width={1536}
                 height={1024}
-                sizes="(min-width: 1024px) 280px, 52vw"
-                className="block w-full"
-                imageClassName="block h-auto w-full object-contain"
+                sizes="180px"
+                className="block w-full h-full"
+                imageClassName="block w-full h-full object-contain"
               />
             </div>
           </div>

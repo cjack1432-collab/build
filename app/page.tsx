@@ -146,6 +146,9 @@ export default function Home() {
               backgroundColor: '#f8f6f1',
               padding: '0.75rem',
               boxShadow: '0 18px 35px rgba(0, 0, 0, 0.08)',
+              maxWidth: '420px',
+              marginLeft: 'auto',
+              marginRight: 'auto',
             }}
           >
             <LightboxImage
