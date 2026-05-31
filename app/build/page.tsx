@@ -2,6 +2,7 @@
 
 import React, { useRef } from 'react'
 import SystemAuditor from '../../components/SystemAuditor'
+import LightboxImage from '../../components/LightboxImage'
 
 export default function Build() {
   const auditorRef = useRef<HTMLDivElement>(null)
@@ -92,7 +93,7 @@ export default function Build() {
 
       {/* HERO */}
       <section className="container-custom py-20 md:py-32">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-12 items-center">
           <div className="max-w-2xl">
             <h1 className="text-4xl md:text-6xl font-serif mb-6 leading-tight">
               Build Something Real. Fast. Clean. Connected.
@@ -112,23 +113,17 @@ export default function Build() {
               </button>
             </div>
           </div>
-          <div className="hidden md:block">
-            <div style={{ overflow: 'hidden', height: 'clamp(160px, 20vw, 280px)' }}>
-              <img
-                src="/images/moderate-murmurations-hero.webp"
-                srcSet="/images/moderate-murmurations-hero.webp 1x, /images/moderate-murmurations-hero@2x.webp 2x"
+          <div className="w-full">
+            <div className="overflow-hidden bg-[#edece7] shadow-[0_16px_34px_rgba(0,0,0,0.14)]">
+              <LightboxImage
+                src="/images/build-murmuration-hero.webp"
                 alt="Black and white murmuration pattern representing organized movement and business clarity."
-                loading="eager"
-                decoding="async"
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  display: 'block',
-                  opacity: 0.85,
-                  objectFit: 'cover',
-                  objectPosition: 'center',
-                  transform: 'scaleX(1.9)',
-                }}
+                width={1536}
+                height={1024}
+                priority
+                sizes="(min-width: 768px) 46vw, 100vw"
+                className="block w-full"
+                imageClassName="block h-[220px] w-full object-cover object-center md:h-[280px]"
               />
             </div>
           </div>

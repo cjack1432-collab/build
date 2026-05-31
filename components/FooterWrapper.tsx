@@ -7,6 +7,7 @@ import Footer from "./Footer"
 export default function FooterWrapper() {
   const pathname = usePathname()
   const showContact = pathname !== "/"
+  const showHomepageAccent = pathname === "/"
 
-  return <Footer showContact={showContact} />
+  return <Footer showContact={showContact} showHomepageAccent={showHomepageAccent} />
 }

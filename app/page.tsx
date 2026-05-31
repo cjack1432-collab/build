@@ -1,3 +1,5 @@
+import LightboxImage from '../components/LightboxImage'
+
 export default function Home() {
   const consultationLink = 'mailto:mrnamaslay@gmail.com?subject=Free%20Launch%20Consultation%20%E2%80%93%20Moderate%20Murmurations'
   const walkthroughLink = 'mailto:mrnamaslay@gmail.com?subject=AI%20Guide%20Walkthrough%20%E2%80%93%20Moderate%20Murmurations'
@@ -59,7 +61,7 @@ export default function Home() {
       label: 'View Live Example',
       external: true,
       download: false,
-      image: '/images/frequentsee-h2o-logo.png',
+      image: '/images/frequent-see-h2o-logo.webp',
       imageAlt: 'FreQuent SEE H2O logo used as a live launch example.',
     },
     {
@@ -139,17 +141,21 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div style={{ backgroundColor: '#faf9f6' }}>
-            <img
+          <div
+            style={{
+              backgroundColor: '#f8f6f1',
+              padding: '0.75rem',
+              boxShadow: '0 18px 35px rgba(0, 0, 0, 0.08)',
+            }}
+          >
+            <LightboxImage
               src="/images/ai-modern-cognitive-leverage-cover.webp"
               alt="AI as Modern Cognitive Leverage guide cover by Moderate Murmurations."
-              loading="lazy"
-              decoding="async"
-              style={{
-                width: '100%',
-                height: 'auto',
-                display: 'block',
-              }}
+              width={1254}
+              height={1254}
+              sizes="(min-width: 768px) 42vw, 100vw"
+              className="block w-full"
+              imageClassName="block h-auto w-full object-contain"
             />
           </div>
         </div>
@@ -262,11 +268,17 @@ export default function Home() {
                     {resource.title}
                   </h3>
                   {resource.image && (
-                    <img
-                      src={resource.image}
-                      alt={resource.imageAlt || resource.title}
-                      style={{ width: '100px', height: '100px', objectFit: 'contain', flexShrink: 0 }}
-                    />
+                    <div style={{ width: '132px', flexShrink: 0 }}>
+                      <LightboxImage
+                        src={resource.image}
+                        alt={resource.imageAlt || resource.title}
+                        width={1254}
+                        height={1254}
+                        sizes="132px"
+                        className="block w-full"
+                        imageClassName="block h-[132px] w-full object-contain"
+                      />
+                    </div>
                   )}
                 </div>
                 <p className="text-sm opacity-75 leading-relaxed mb-8">{resource.description}</p>
