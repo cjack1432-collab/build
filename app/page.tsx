@@ -119,7 +119,7 @@ export default function Home() {
       <MurmurDivider />
 
       <section className="py-32 border-y">
-        <div className="container-custom grid md:grid-cols-2 gap-12" style={{ alignItems: 'center' }}>
+        <div className="container-custom grid md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-sm tracking-wide uppercase font-semibold opacity-60 mb-4">
               Start With The Free AI Guide

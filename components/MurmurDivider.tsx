@@ -35,8 +35,12 @@ export default function MurmurDivider({
       <div
         onClick={() => setIsOpen(true)}
         onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
+          if (e.key === ' ') {
             e.preventDefault()
+            setIsOpen(true)
+          }
+
+          if (e.key === 'Enter') {
             setIsOpen(true)
           }
         }}
