@@ -119,8 +119,8 @@ export default function Build() {
               style={{ aspectRatio: '3 / 2' }}
             >
               <LightboxImage
-                src="/images/build-hero-chatgpt.png"
-                alt="Black and white murmuration pattern representing organized movement and business clarity."
+                src="/images/build-murmuration-hero.webp"
+                alt="Black and white dandelion and butterfly artwork representing organized movement and business clarity."
                 width={1536}
                 height={1024}
                 priority
