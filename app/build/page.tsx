@@ -93,7 +93,7 @@ export default function Build() {
 
       {/* HERO */}
       <section className="container-custom py-20 md:py-32">
-        <div className="grid md:grid-cols-2 gap-10 md:gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-12 items-center md:items-stretch">
           <div className="max-w-2xl">
             <h1 className="text-4xl md:text-6xl font-serif mb-6 leading-tight">
               Build Something Real. Fast. Clean. Connected.
@@ -113,10 +113,9 @@ export default function Build() {
               </button>
             </div>
           </div>
-          <div className="w-full justify-self-end" style={{ maxWidth: '460px' }}>
+          <div className="w-full justify-self-end h-full" style={{ maxWidth: '460px' }}>
             <div
-              className="overflow-hidden bg-[#edece7] shadow-[0_16px_34px_rgba(0,0,0,0.14)]"
-              style={{ aspectRatio: '1 / 1' }}
+              className="aspect-square h-full min-h-[320px] overflow-hidden bg-[#edece7] shadow-[0_16px_34px_rgba(0,0,0,0.14)] md:aspect-auto md:min-h-0"
             >
               <LightboxImage
                 src="/images/build-hero-image-one.webp"
