@@ -2,7 +2,7 @@
 
 import React, { useRef } from 'react'
 import SystemAuditor from '../../components/SystemAuditor'
-import LightboxImage from '../../components/LightboxImage'
+import Image from "next/image"
 
 export default function Build() {
   const auditorRef = useRef<HTMLDivElement>(null)
@@ -93,12 +93,12 @@ export default function Build() {
 
       {/* HERO */}
       <section className="container-custom py-20 md:py-32">
-        <div className="grid md:grid-cols-2 gap-10 md:gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-x-56 md:gap-y-12 items-center">
           <div className="max-w-2xl">
             <h1 className="text-4xl md:text-6xl font-serif mb-6 leading-tight">
               Build Something Real. Fast. Clean. Connected.
             </h1>
-            <p className="text-lg md:text-xl opacity-80 leading-relaxed mb-6">
+            <p className="text-xl md:text-xl opacity-80 leading-relaxed mb-6">
               For businesses ready to move from scattered ideas into websites, workflows, visibility, and systems they can understand and own.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -113,17 +113,19 @@ export default function Build() {
               </button>
             </div>
           </div>
-          <div className="heroImageWrap justify-self-end">
-            <div className="overflow-hidden bg-[#edece7] shadow-[0_16px_34px_rgba(0,0,0,0.14)]">
-              <LightboxImage
+          <div className="heroImageWrap justify-self-end self-start w-full max-w-[380px]" style={{ maxWidth: '380px' }}>
+            <div
+              className="w-full max-w-[380px] aspect-square overflow-hidden bg-[#edece7] shadow-[0_16px_34px_rgba(0,0,0,0.14)]"
+              style={{ aspectRatio: '1 / 1', maxWidth: '380px' }}
+            >
+              <Image
                 src="/images/build-hero-image-one.webp"
                 alt="Black and white dandelion and butterfly artwork representing organized movement and business clarity."
-                width={1536}
+                width={1024}
                 height={1024}
                 priority
-                sizes="(min-width: 768px) 420px, 100vw"
-                className="block w-full"
-                imageClassName="heroImage"
+                sizes="(min-width: 768px) 380px, 100vw"
+                className="heroImage"
               />
             </div>
           </div>

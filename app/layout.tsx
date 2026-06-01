@@ -107,7 +107,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <h1 style={{ margin: 0 }} className="font-serif">
                   Moderate Murmurations
                 </h1>
-                <p style={{ margin: '0.25rem 0 0 0', fontSize: '0.875rem', fontWeight: 300, fontStyle: 'italic', opacity: 0.6 }} className="font-serif">
+                <p style={{ margin: '0.25rem 0 0 0', fontSize: '1.125rem', fontWeight: 300, fontStyle: 'italic', opacity: 0.6 }} className="font-serif">
                   Business Launch Architecture
                 </p>
               </div>

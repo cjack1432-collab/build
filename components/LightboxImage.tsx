@@ -28,6 +28,7 @@ export default function LightboxImage({
   sizes,
 }: LightboxImageProps) {
   const [isOpen, setIsOpen] = useState(false)
+  const buttonClassName = ['block', 'h-full', 'w-full', className].filter(Boolean).join(' ')
 
   useEffect(() => {
     if (!isOpen) return
@@ -53,7 +54,7 @@ export default function LightboxImage({
         type="button"
         onClick={() => setIsOpen(true)}
         aria-label={`View full-size image: ${alt}`}
-        className={className}
+        className={buttonClassName}
         style={{ cursor: 'zoom-in', background: 'transparent', border: 'none', padding: 0 }}
       >
         <Image
