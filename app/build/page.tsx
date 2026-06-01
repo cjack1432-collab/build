@@ -93,7 +93,7 @@ export default function Build() {
 
       {/* HERO */}
       <section className="container-custom py-20 md:py-32">
-        <div className="grid md:grid-cols-2 gap-10 md:gap-12 items-center md:items-stretch">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-12 items-center">
           <div className="max-w-2xl">
             <h1 className="text-4xl md:text-6xl font-serif mb-6 leading-tight">
               Build Something Real. Fast. Clean. Connected.
@@ -113,20 +113,17 @@ export default function Build() {
               </button>
             </div>
           </div>
-          <div className="w-full justify-self-end h-full" style={{ maxWidth: '460px' }}>
-            <div
-              className="aspect-square h-full min-h-[320px] overflow-hidden bg-[#edece7] shadow-[0_16px_34px_rgba(0,0,0,0.14)] md:aspect-auto md:min-h-0"
-            >
+          <div className="heroImageWrap justify-self-end">
+            <div className="overflow-hidden bg-[#edece7] shadow-[0_16px_34px_rgba(0,0,0,0.14)]">
               <LightboxImage
                 src="/images/build-hero-image-one.webp"
                 alt="Black and white dandelion and butterfly artwork representing organized movement and business clarity."
                 width={1536}
                 height={1024}
                 priority
-                sizes="(min-width: 768px) 460px, 100vw"
-                className="block w-full h-full"
-                imageClassName="block h-full w-full object-contain"
-                imageStyle={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                sizes="(min-width: 768px) 420px, 100vw"
+                className="block w-full"
+                imageClassName="heroImage"
               />
             </div>
           </div>

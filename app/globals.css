@@ -434,6 +434,22 @@ h6 {
   background-color: #f0efeb;
 }
 
+.heroImageWrap {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  align-self: center;
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  display: block;
+}
+
 /* Responsive */
 @media (min-width: 640px) {
   .sm\:flex-row {
