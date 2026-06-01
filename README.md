@@ -1,6 +1,6 @@
-# DCFB Wellness
+# Moderate Murmurations
 
-Production site for DCFB Wellness built with Next.js 14 App Router.
+Production site for Moderate Murmurations built with Next.js 14 App Router.
 
 ## Setup
 
@@ -23,7 +23,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open the development URL shown in your terminal.
 
 ## Routes
 
@@ -42,5 +42,5 @@ npm run start
 
 ## Environment Variables
 
-- `NEXT_PUBLIC_SITE_URL`: Public site URL (e.g., `https://dcfbwellness.com`)
+- `NEXT_PUBLIC_SITE_URL`: Public site URL (e.g., `https://moderatemurmurations.com`)
 - `GEMINI_API_KEY`: Google Gemini API key for audit feature (optional)

@@ -3,11 +3,11 @@ import Link from 'next/link'
 import Footer from '../components/FooterWrapper'
 import { Metadata } from 'next'
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://moderatemurmurations.com'
 
 export const metadata: Metadata = {
-  title: 'Moderate Murmurations | Business Launch Architecture and AI Workflow Consulting',
-  description: 'Business launch architecture, AI workflow consulting, websites, digital resources, Google visibility guidance, and practical business infrastructure for small businesses, founders, wellness professionals, hospitality operators, and local service businesses.',
+  title: 'Launch Your Business Online In Days | Moderate Murmurations',
+  description: 'Launch your business online in days, not weeks. Websites, AI workflows, automation, branding, and digital systems built for small businesses and entrepreneurs.',
   keywords: [
     'business launch architecture',
     'AI workflow consulting',
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: 'Moderate Murmurations | Business Launch Architecture and AI Workflow Consulting',
-    description: 'Business launch architecture, AI workflow consulting, websites, digital resources, Google visibility guidance, and practical business infrastructure for small businesses, founders, wellness professionals, hospitality operators, and local service businesses.',
+    title: 'Launch Your Business Online In Days | Moderate Murmurations',
+    description: 'Launch your business online in days, not weeks. Websites, AI workflows, automation, branding, and digital systems built for small businesses and entrepreneurs.',
     url: baseUrl,
     siteName: 'Moderate Murmurations',
     images: [
@@ -35,15 +35,19 @@ export const metadata: Metadata = {
         url: `${baseUrl}/og.png`,
         width: 1200,
         height: 630,
+        alt: 'Moderate Murmurations business launch architecture and AI workflow consulting',
       },
     ],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Moderate Murmurations | Business Launch Architecture and AI Workflow Consulting',
-    description: 'Business launch architecture, AI workflow consulting, websites, digital resources, Google visibility guidance, and practical business infrastructure for small businesses, founders, wellness professionals, hospitality operators, and local service businesses.',
+    title: 'Launch Your Business Online In Days | Moderate Murmurations',
+    description: 'Launch your business online in days, not weeks. Websites, AI workflows, automation, branding, and digital systems built for small businesses and entrepreneurs.',
     images: [`${baseUrl}/og.png`],
+  },
+  icons: {
+    icon: '/icon.png',
   },
 }
 
@@ -83,6 +87,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
+        {/* TODO: Add GA4 measurement ID and gtag script before launch analytics tracking. */}
+        {/* TODO: Add Google Search Console verification meta tag when ownership token is available. */}
         <link rel="canonical" href={baseUrl} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -104,9 +110,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           >
             <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div>
-                <h1 style={{ margin: 0 }} className="font-serif">
+                <h2 style={{ margin: 0 }} className="font-serif">
                   Moderate Murmurations
-                </h1>
+                </h2>
                 <p style={{ margin: '0.25rem 0 0 0', fontSize: '1.125rem', fontWeight: 300, fontStyle: 'italic', opacity: 0.6 }} className="font-serif">
                   Business Launch Architecture
                 </p>
