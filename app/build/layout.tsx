@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://moderatemurmurations.com'
 
 export const metadata: Metadata = {
   title: 'Build With Moderate Murmurations | Website Launch, AI Workflows, and Digital Infrastructure',

@@ -1,7 +1,7 @@
 import { writeFileSync, mkdirSync } from 'node:fs'
 import { env } from 'node:process'
-const site = env.SITE_URL || env.VITE_SITE_URL || 'http://localhost:5173'
-const publicDir = new URL('../public/', import.meta.url).pathname.replace(/\/g, '/')
+const site = env.SITE_URL || env.VITE_SITE_URL || 'https://moderatemurmurations.com'
+const publicDir = new URL('../public/', import.meta.url).pathname.replace(/\\/g, '/')
 try { mkdirSync(publicDir, { recursive: true }) } catch (e) {}
 
 const robots = `User-agent: *\nAllow: /\nSitemap: ${site.replace(/\/$/, '')}/sitemap.xml\n`

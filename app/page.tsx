@@ -333,6 +333,11 @@ export default function Home() {
           <p className="text-sm opacity-60 leading-relaxed mt-12 max-w-3xl">
             Scope depends on the business, timeline, and level of implementation required. Flexible arrangements may be discussed when there is strong alignment.
           </p>
+          <div className="mt-8 text-center">
+            <a href="/build" className="cta-primary text-center tracking-wide uppercase text-sm font-semibold">
+              Explore the Build Path
+            </a>
+          </div>
         </div>
       </section>
 

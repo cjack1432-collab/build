@@ -1,8 +1,6 @@
 {
-  "/_not-found": "app/_not-found.js",
-  "/api/audit/route": "app/api/audit/route.js",
+  "/not-found": "app/not-found.js",
   "/page": "app/page.js",
-  "/robots.txt/route": "app/robots.txt/route.js",
-  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/icon.png/route": "app/icon.png/route.js",
   "/build/page": "app/build/page.js"
 }
