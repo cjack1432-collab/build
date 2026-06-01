@@ -116,7 +116,7 @@ export default function Build() {
           <div className="w-full justify-self-end" style={{ maxWidth: '460px' }}>
             <div
               className="overflow-hidden bg-[#edece7] shadow-[0_16px_34px_rgba(0,0,0,0.14)]"
-              style={{ aspectRatio: '3 / 2' }}
+              style={{ aspectRatio: '1 / 1' }}
             >
               <LightboxImage
                 src="/images/build-hero-image-one.webp"
@@ -126,8 +126,8 @@ export default function Build() {
                 priority
                 sizes="(min-width: 768px) 460px, 100vw"
                 className="block w-full h-full"
-                imageClassName="block h-full w-full object-cover"
-                imageStyle={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                imageClassName="block h-full w-full object-contain"
+                imageStyle={{ width: '100%', height: '100%', objectFit: 'contain' }}
               />
             </div>
           </div>
