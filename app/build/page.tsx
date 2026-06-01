@@ -1,7 +1,8 @@
 'use client'
 
-import React, { useState, useRef } from 'react'
+import React, { useRef } from 'react'
 import SystemAuditor from '../../components/SystemAuditor'
+import Image from "next/image"
 
 export default function Build() {
   const auditorRef = useRef<HTMLDivElement>(null)
@@ -10,182 +11,247 @@ export default function Build() {
     auditorRef?.current?.scrollIntoView({ behavior: 'smooth' })
   }
 
+  const consultationLink = 'mailto:mrnamaslay@gmail.com?subject=Free%20Launch%20Consultation%20%E2%80%93%20Moderate%20Murmurations'
+
+  const buildLanes = [
+    {
+      title: 'Starting From Scratch',
+      copy: 'You need a website, business presence, offer structure, and basic digital infrastructure without learning everything the hard way.',
+    },
+    {
+      title: 'Cleaning Up What Exists',
+      copy: 'Your site, socials, Google listing, or systems already exist, but they feel disconnected, outdated, unclear, or inefficient.',
+    },
+    {
+      title: 'Building Leverage',
+      copy: 'You want AI, workflows, resources, prompts, content systems, and business tools to work together instead of becoming more noise.',
+    },
+  ]
+
+  const buildCategories = [
+    {
+      title: 'Build and Connect',
+      copy: 'Websites, landing pages, domains, hosting, Google presence, business email, social alignment, and launch structure.',
+    },
+    {
+      title: 'Clean and Optimize',
+      copy: 'Site review, technical hygiene, SEO foundations, performance checks, content cleanup, usability improvements, and local visibility basics.',
+    },
+    {
+      title: 'Teach and Organize',
+      copy: 'AI literacy, prompt organization, workflow setup, Google Drive structure, reusable templates, and simple systems that can be maintained.',
+    },
+    {
+      title: 'Legitimize and Prepare',
+      copy: 'Entity structure awareness, business presence, account separation, readiness sequencing, credit awareness, and basic operational foundation.',
+    },
+    {
+      title: 'Advise and Escalate',
+      copy: 'Ads judgment, directory strategy, backlink awareness, vendor selection, delegation decisions, tool selection, and knowing when not to spend.',
+    },
+  ]
+
+  const pricingOptions = [
+    {
+      title: 'Free Conversation',
+      start: 'Free',
+      includes: 'Initial review, business context, friction points, and next-step recommendation.',
+    },
+    {
+      title: 'Foundational Review',
+      start: 'Starting at $250',
+      includes: 'Review of website, Google presence, business infrastructure, messaging, AI workflow opportunities, and priority fixes.',
+    },
+    {
+      title: 'Launch Sprint',
+      start: 'Starting at $1,500',
+      includes: 'Website structure, messaging, launch support, basic SEO foundations, digital presence setup guidance, and practical implementation support.',
+    },
+    {
+      title: 'Business Launch Architecture',
+      start: 'Starting at $2,500',
+      includes: 'A deeper launch build with website, positioning, digital infrastructure, Google visibility guidance, AI workflow setup, resource structure, and implementation support.',
+    },
+    {
+      title: 'Systems Optimization / Ongoing Support',
+      start: 'Custom',
+      includes: 'Website cleanup, AI workflows, content systems, resource creation, operational organization, visibility improvements, and maintenance support.',
+    },
+  ]
+
+  const processSteps = [
+    'Start where you are',
+    'Review what already exists',
+    'Identify what actually needs work',
+    'Build or clean up the right pieces',
+    'Explain what changed and why',
+    'Leave you with ownership, access, and next steps',
+  ]
+
   return (
     <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
-      {/* HERO SECTION */}
+
+      {/* HERO */}
       <section className="container-custom py-20 md:py-32">
-        <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-6xl font-serif mb-6 leading-tight">
-            Build Something Real. Fast. Clean. Connected.
-          </h1>
-          <p className="text-lg md:text-xl opacity-80 leading-relaxed mb-4">
-            We help people build legitimate, organized systems for business and life — websites, infrastructure, AI, and operations — without confusion, dependency, or wasted time.
-          </p>
-          <p className="text-sm italic opacity-60 mb-10">
-            Meet us where you are. Leave with systems you understand and own.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <a href="#contact" className="cta-primary uppercase tracking-widest text-xs font-bold">
-              Start a conversation
-            </a>
-            <button 
-              onClick={scrollToAuditor}
-              className="cta-secondary uppercase tracking-widest text-xs font-bold"
+        <div className="grid md:grid-cols-2 gap-10 md:gap-x-56 md:gap-y-12 items-center">
+          <div className="max-w-2xl">
+            <h1 className="text-4xl md:text-6xl font-serif mb-6 leading-tight">
+              Build Something Real. Fast. Clean. Connected.
+            </h1>
+            <p className="text-xl md:text-xl opacity-80 leading-relaxed mb-6">
+              For businesses ready to move from scattered ideas into websites, workflows, visibility, and systems they can understand and own.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <a href={consultationLink} className="cta-primary uppercase tracking-widest text-xs font-bold">
+                Start A Conversation
+              </a>
+              <button
+                onClick={scrollToAuditor}
+                className="cta-secondary uppercase tracking-widest text-xs font-bold"
+              >
+                Request Foundational Review
+              </button>
+            </div>
+          </div>
+          <div className="heroImageWrap justify-self-end self-start w-full max-w-[380px]" style={{ maxWidth: '380px' }}>
+            <div
+              className="w-full max-w-[380px] aspect-square overflow-hidden bg-[#edece7] shadow-[0_16px_34px_rgba(0,0,0,0.14)]"
+              style={{ aspectRatio: '1 / 1', maxWidth: '380px' }}
             >
-              Have us review what you already have
-            </button>
+              <Image
+                src="/images/build-hero-image-one.webp"
+                alt="Black and white dandelion and butterfly artwork representing organized movement and business clarity."
+                width={1024}
+                height={1024}
+                priority
+                sizes="(min-width: 768px) 380px, 100vw"
+                className="heroImage"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* WHO THIS IS FOR */}
+      {/* WHERE WE MEET YOU */}
       <section className="bg-[#f2f1ed] py-24">
         <div className="container-custom">
+          <div className="max-w-3xl mb-12">
+            <h2 className="text-3xl font-serif mb-4">Where We Meet You</h2>
+          </div>
           <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
-            <div className="flex flex-col h-full border-l border-gray-300 pl-6">
-              <h3 className="text-lg font-serif mb-4 italic">1) If you are starting and want it done right</h3>
-              <p className="text-sm opacity-70 leading-relaxed mb-4 flex-grow">
-                You may not love the technical side. You may not know where to begin. You just want your website live, your business set up cleanly, and your presence to look legitimate without learning everything the hard way.
-              </p>
-              <p className="text-xs font-medium mb-4 opacity-80">
-                We handle the setup, explain what matters, and make sure you actually own what's built.
-              </p>
-              <span className="text-[10px] uppercase tracking-[0.2em] font-bold opacity-40">We meet you here.</span>
-            </div>
-
-            <div className="flex flex-col h-full border-l border-gray-300 pl-6">
-              <h3 className="text-lg font-serif mb-4 italic">2) If you already have something but it feels messy</h3>
-              <p className="text-sm opacity-70 leading-relaxed mb-4 flex-grow">
-                Your site exists. Your socials exist. Your Google listing exists. But nothing feels connected, efficient, or clear. You know enough to see the problems, but not enough to fix them quickly.
-              </p>
-              <p className="text-xs font-medium mb-4 opacity-80">
-                We review, clean up, optimize, and connect what's already there — without forcing rebuilds or upsells.
-              </p>
-              <span className="text-[10px] uppercase tracking-[0.2em] font-bold opacity-40">We meet you here.</span>
-            </div>
-
-            <div className="flex flex-col h-full border-l border-gray-300 pl-6">
-              <h3 className="text-lg font-serif mb-4 italic">3) If you want leverage and understanding</h3>
-              <p className="text-sm opacity-70 leading-relaxed mb-4 flex-grow">
-                You care about systems. You want AI working for you, not confusing you. You want to understand credit, structure, tools, and timing so you can make calm, confident decisions and scale when it actually makes sense.
-              </p>
-              <p className="text-xs font-medium mb-4 opacity-80">
-                We teach, organize, and build alongside you — translating complexity into usable systems.
-              </p>
-              <span className="text-[10px] uppercase tracking-[0.2em] font-bold opacity-40">We meet you here.</span>
-            </div>
+            {buildLanes.map((lane, i) => (
+              <div key={lane.title} className="flex flex-col h-full border-l border-gray-300 pl-6">
+                <h3 className="text-lg font-serif mb-4 italic">{i + 1}) {lane.title}</h3>
+                <p className="text-sm opacity-70 leading-relaxed flex-grow">{lane.copy}</p>
+                <span className="text-[10px] uppercase tracking-[0.2em] font-bold opacity-40 mt-4">We meet you here.</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* SYSTEM AUDITOR SECTION */}
-      <section ref={auditorRef} id="review" className="bg-white py-24 border-y border-gray-100">
-        <SystemAuditor />
-      </section>
-
-      {/* WHAT WE ACTUALLY DO */}
+      {/* WHAT THE BUILD CAN INCLUDE */}
       <section className="container-custom py-24">
         <div className="max-w-3xl mb-16">
-          <h2 className="text-3xl font-serif mb-4">What we actually do.</h2>
-          <p className="opacity-60 italic">We don't sell tools. We don't sell hype. We build connected systems that work together and make sense.</p>
+          <h2 className="text-3xl font-serif mb-4">What The Build Can Include</h2>
+          <p className="opacity-60 italic">We do not sell tools. We do not sell hype. We build connected systems that work together and make sense.</p>
         </div>
-
         <div className="grid gap-12 max-w-4xl">
-          <div className="group">
-            <h4 className="text-xs uppercase tracking-widest font-bold mb-3 border-b border-gray-200 pb-2 w-max pr-8">Build and Connect</h4>
-            <p className="text-sm md:text-base opacity-75 leading-relaxed">
-              Websites and landing pages. Domains and hosting. Google presence and verification. Social account setup and alignment. Clean structure from day one. If you already have something, we start there.
+          {buildCategories.map((cat) => (
+            <div key={cat.title}>
+              <h4 className="text-xs uppercase tracking-widest font-bold mb-3 border-b border-gray-200 pb-2 w-max pr-8">{cat.title}</h4>
+              <p className="text-sm md:text-base opacity-75 leading-relaxed">{cat.copy}</p>
+            </div>
+          ))}
+        </div>
+        <p className="text-xs opacity-50 leading-relaxed mt-10 max-w-3xl italic">
+          Legitimize and Prepare guidance covers awareness and readiness only. This is not legal, tax, or professional financial advice.
+        </p>
+      </section>
+
+      {/* STARTING POINTS */}
+      <section className="bg-white py-24 border-y border-gray-100">
+        <div className="container-custom">
+          <div className="max-w-3xl mb-12">
+            <h2 className="text-3xl font-serif mb-4">Starting Points</h2>
+            <p className="text-base opacity-75 leading-relaxed">
+              Every project is scoped after the free conversation. These are starting points, not rigid promises.
+            </p>
+            <p className="text-sm opacity-60 leading-relaxed mt-2">
+              Pricing depends on scope, timeline, assets available, implementation depth, and how much cleanup is required.
             </p>
           </div>
-          <div className="group">
-            <h4 className="text-xs uppercase tracking-widest font-bold mb-3 border-b border-gray-200 pb-2 w-max pr-8">Clean and Optimize</h4>
-            <p className="text-sm md:text-base opacity-75 leading-relaxed">
-              Site reviews and cleanup. SEO foundations and technical hygiene. Review systems and legitimacy signals. Performance and usability checks. Ongoing maintenance and oversight. No forced rebuilds. No unnecessary changes.
-            </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {pricingOptions.map((option) => (
+              <article
+                key={option.title}
+                style={{
+                  border: '1px solid #e6e9ef',
+                  padding: '2rem',
+                  backgroundColor: '#faf9f6',
+                }}
+              >
+                <p className="text-xs tracking-wide uppercase font-semibold opacity-50 mb-2">{option.start}</p>
+                <h3 className="text-xl font-serif mb-4">{option.title}</h3>
+                <p className="text-sm opacity-70 leading-relaxed">{option.includes}</p>
+              </article>
+            ))}
           </div>
-          <div className="group">
-            <h4 className="text-xs uppercase tracking-widest font-bold mb-3 border-b border-gray-200 pb-2 w-max pr-8">Teach and Organize</h4>
-            <p className="text-sm md:text-base opacity-75 leading-relaxed">
-              AI literacy that actually saves time. Prompt organization and usage guidance. Chat and project structure. Google Drive organization. Simple workflows that scale with you. You don't need to become technical. You need clarity.
-            </p>
-          </div>
-          <div className="group">
-            <h4 className="text-xs uppercase tracking-widest font-bold mb-3 border-b border-gray-200 pb-2 w-max pr-8">Legitimize and Prepare</h4>
-            <p className="text-sm md:text-base opacity-75 leading-relaxed">
-              Entity and structure awareness. Personal and business credit literacy. Banking separation and readiness. Understanding timing, sequencing, and patience. Knowing when not to apply or expand. This is not about rushing. It's about being ready.
-            </p>
-          </div>
-          <div className="group">
-            <h4 className="text-xs uppercase tracking-widest font-bold mb-3 border-b border-gray-200 pb-2 w-max pr-8">Advise and Escalate</h4>
-            <p className="text-sm md:text-base opacity-75 leading-relaxed">
-              Ads judgment (Google, Yelp, when and when not). Directory and backlink strategy. Shopping paid tools intelligently. Delegating work when it actually makes sense. We don't push vendors. We protect your time and money.
-            </p>
-          </div>
+          <p className="text-sm opacity-60 leading-relaxed mt-10 max-w-3xl">
+            Trade, phased builds, and flexible arrangements may be discussed when there is strong alignment.
+          </p>
         </div>
       </section>
 
-      {/* HOW THIS WORKS */}
-      <section className="bg-white py-24 border-y border-gray-100">
+      {/* HOW THE PROCESS WORKS */}
+      <section className="bg-white py-24 border-b border-gray-100">
         <div className="container-custom">
-          <h2 className="text-3xl font-serif mb-12 text-center">How this works.</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8 max-w-5xl mx-auto">
-            {[
-              "We start where you are. No assumptions. No judgment. We review what exists before touching anything.",
-              "We assess before we change. Many things don't need rebuilding. They need understanding.",
-              "We build fast and clean. When something needs to be created, we move quickly and deliberately.",
-              "We explain as we go. You're not left guessing. You see what's happening and why.",
-              "We don't rush decisions. Credit, ads, expansion — timing matters more than speed.",
-              "You leave with ownership. Accounts are yours. Systems are understandable. You're not stuck."
-            ].map((step, i) => (
+          <h2 className="text-3xl font-serif mb-12">How The Process Works</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8 max-w-5xl">
+            {processSteps.map((step, i) => (
               <div key={i} className="flex gap-4">
                 <span className="text-2xl font-serif opacity-20 italic shrink-0">{i + 1}</span>
                 <p className="text-sm opacity-80 leading-relaxed">{step}</p>
               </div>
             ))}
           </div>
-          <p className="text-center mt-16 text-xs uppercase tracking-[0.3em] font-bold opacity-50">This is operator led, not agency managed.</p>
+          <p style={{ marginTop: '4rem', fontSize: '0.875rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.2em', borderLeft: '3px solid #1a1a1a', paddingLeft: '1rem' }}>This is operator led, not agency managed.</p>
         </div>
       </section>
 
-      {/* INFRASTRUCTURE READINESS */}
-      <section className="container-custom py-24 flex flex-col items-center text-center">
-        <div className="max-w-2xl">
-          <h2 className="text-2xl font-serif mb-6 italic">Infrastructure Readiness</h2>
-          <p className="text-sm font-semibold uppercase tracking-widest mb-4 opacity-80">Most problems don't come from lack of effort. They come from weak foundations.</p>
-          <p className="text-sm opacity-70 leading-relaxed mb-6">
-            We help you prepare your business to grow without breaking: Clean digital legitimacy. Proper account separation. Reporting consistency. Credit awareness and sequencing. Calm decision making instead of reactive moves.
+      {/* SYSTEMS THAT BREATHE */}
+      <section className="container-custom py-24">
+        <div className="max-w-3xl">
+          <h2 className="text-3xl font-serif mb-6">Systems That Breathe</h2>
+          <p className="text-base opacity-75 leading-relaxed mb-8">
+            A calm system is not just a nice website. It is the visible front end and the invisible back end working together: accounts, links, workflows, files, content, tools, and decisions organized well enough that the business can move without constant friction.
           </p>
-          <p className="text-xs italic opacity-50">If this layer matters to you, we already understand it. If it doesn't yet, we don't force it.</p>
+          <a href={consultationLink} className="cta-primary uppercase tracking-widest text-xs font-bold">
+            Start A Conversation
+          </a>
         </div>
       </section>
 
-      {/* ONGOING ACCESS AND MAINTENANCE */}
-      <section className="py-24">
-        <div className="container-custom flex flex-col items-center text-center">
-          <div className="max-w-2xl text-zinc-900" style={{ color: '#111827' }}>
-            <h2 className="text-2xl font-serif mb-6 italic">Ongoing Access and Maintenance</h2>
-            <p className="text-sm uppercase tracking-widest mb-4 text-zinc-900" style={{ color: '#111827' }}>Building something is one moment. Operating it is ongoing.</p>
-            <p className="text-sm leading-relaxed mb-6 text-zinc-900" style={{ color: '#111827' }}>
-              We offer website and system reviews. Maintenance and cleanup. Guidance on ads and visibility. Help navigating tools and changes. Long term access to the system.
-            </p>
-            <p className="text-xs italic mb-0 text-zinc-900" style={{ color: '#111827' }}>Depth, scope, and frequency are always discussed clearly. Nothing is hidden. Nothing is forced.</p>
-          </div>
-        </div>
+      {/* FOUNDATIONAL REVIEW FORM */}
+      <section ref={auditorRef} id="review" className="bg-white py-24 border-y border-gray-100">
+        <SystemAuditor />
       </section>
 
-      {/* CLOSE CTA SECTION */}
+      {/* CLOSING CTA */}
       <section id="contact" className="container-custom py-32 text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-serif mb-8 leading-tight">
-            If you want to build something clean, legitimate, and understandable — or fix what already exists — start here.
+            Ready to build something clean, organized, and yours?
           </h2>
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-            <a href="mailto:hello@dcfbwellness.com" className="cta-primary uppercase tracking-widest text-xs font-bold">Start a conversation</a>
-            <button 
+            <a href={consultationLink} className="cta-primary uppercase tracking-widest text-xs font-bold">
+              Start A Conversation
+            </a>
+            <button
               onClick={scrollToAuditor}
               className="cta-secondary uppercase tracking-widest text-xs font-bold"
             >
-              Get a Foundational Audit
+              Request Foundational Review
             </button>
           </div>
           <p className="text-xs uppercase tracking-widest opacity-40 font-bold">No pressure. No rush. Just clarity.</p>

@@ -6,18 +6,30 @@ import { Metadata } from 'next'
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
 
 export const metadata: Metadata = {
-  title: 'DCFB Wellness | Systems for a Calm Life',
-  description: 'Build calm systems for your business and life. Website development, AI workflows, and business infrastructure for Dallas Fort Worth.',
+  title: 'Moderate Murmurations | Business Launch Architecture and AI Workflow Consulting',
+  description: 'Business launch architecture, AI workflow consulting, websites, digital resources, Google visibility guidance, and practical business infrastructure for small businesses, founders, wellness professionals, hospitality operators, and local service businesses.',
+  keywords: [
+    'business launch architecture',
+    'AI workflow consulting',
+    'small business website launch',
+    'digital infrastructure',
+    'business systems consulting',
+    'Google Business Profile guidance',
+    'Dallas business consultant',
+    'AI business systems',
+    'business readiness guide',
+    'small business launch support',
+  ],
   metadataBase: new URL(baseUrl),
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: 'DCFB Wellness | Systems for a Calm Life',
-    description: 'Build calm systems for your business and life. Website development, AI workflows, and business infrastructure for Dallas Fort Worth.',
+    title: 'Moderate Murmurations | Business Launch Architecture and AI Workflow Consulting',
+    description: 'Business launch architecture, AI workflow consulting, websites, digital resources, Google visibility guidance, and practical business infrastructure for small businesses, founders, wellness professionals, hospitality operators, and local service businesses.',
     url: baseUrl,
-    siteName: 'DCFB Wellness',
+    siteName: 'Moderate Murmurations',
     images: [
       {
         url: `${baseUrl}/og.png`,
@@ -29,8 +41,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'DCFB Wellness | Systems for a Calm Life',
-    description: 'Build calm systems for your business and life. Website development, AI workflows, and business infrastructure for Dallas Fort Worth.',
+    title: 'Moderate Murmurations | Business Launch Architecture and AI Workflow Consulting',
+    description: 'Business launch architecture, AI workflow consulting, websites, digital resources, Google visibility guidance, and practical business infrastructure for small businesses, founders, wellness professionals, hospitality operators, and local service businesses.',
     images: [`${baseUrl}/og.png`],
   },
 }
@@ -38,9 +50,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const organizationSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'DCFB Wellness',
+    '@type': 'ProfessionalService',
+    name: 'Moderate Murmurations',
+    alternateName: 'DCFB Wellness',
     url: baseUrl,
+    description: 'Business launch architecture, AI workflow consulting, websites, digital resources, and practical business infrastructure for small businesses, founders, wellness professionals, and local service businesses.',
     sameAs: [
       'https://www.linkedin.com/in/chris-jackson143/',
       'https://mrnamaslay.com',
@@ -51,12 +65,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     ],
   }
 
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Moderate Murmurations',
+    url: baseUrl,
+  }
+
   return (
     <html lang="en">
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
         <link rel="canonical" href={baseUrl} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -80,10 +105,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div>
                 <h1 style={{ margin: 0 }} className="font-serif">
-                  DCFB Wellness
-                </h1>
-                <p style={{ margin: '0.25rem 0 0 0', fontSize: '0.875rem', fontWeight: 300, fontStyle: 'italic', opacity: 0.6 }} className="font-serif">
                   Moderate Murmurations
+                </h1>
+                <p style={{ margin: '0.25rem 0 0 0', fontSize: '1.125rem', fontWeight: 300, fontStyle: 'italic', opacity: 0.6 }} className="font-serif">
+                  Business Launch Architecture
                 </p>
               </div>
             </Link>

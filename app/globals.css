@@ -434,6 +434,18 @@ h6 {
   background-color: #f0efeb;
 }
 
+.heroImageWrap {
+  width: 100%;
+  max-width: 360px;
+}
+
+.heroImage {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  display: block;
+}
+
 /* Responsive */
 @media (min-width: 640px) {
   .sm\:flex-row {

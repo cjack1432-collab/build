@@ -2,7 +2,13 @@
 
 import { useState, useEffect } from 'react'
 
-export default function MurmurDivider() {
+type MurmurDividerProps = {
+  alt?: string
+}
+
+export default function MurmurDivider({
+  alt = 'Black and white murmuration pattern over water representing organized movement and business clarity.',
+}: MurmurDividerProps) {
   const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
@@ -27,8 +33,20 @@ export default function MurmurDivider() {
   return (
     <>
       <div
-        aria-hidden="true"
         onClick={() => setIsOpen(true)}
+        onKeyDown={(e) => {
+          if (e.key === ' ') {
+            e.preventDefault()
+            setIsOpen(true)
+          }
+
+          if (e.key === 'Enter') {
+            setIsOpen(true)
+          }
+        }}
+        role="button"
+        tabIndex={0}
+        aria-label="Open murmuration image"
         style={{
           position: "relative",
           left: "50%",
@@ -47,10 +65,10 @@ export default function MurmurDivider() {
         }}
       >
         <img
-          src="/murmur-strip-1x.webp"
-          srcSet="/murmur-strip-1x.webp 1x, /murmur-strip-2x.webp 2x"
+          src="/images/moderate-murmurations-hero.webp"
+          srcSet="/images/moderate-murmurations-hero.webp 1x, /images/moderate-murmurations-hero@2x.webp 2x"
           sizes="100vw"
-          alt=""
+          alt={alt}
           loading="lazy"
           decoding="async"
           style={{
@@ -86,8 +104,8 @@ export default function MurmurDivider() {
           }}
         >
           <img
-            src="/murmur-strip-2x.webp"
-            alt=""
+            src="/images/moderate-murmurations-hero@2x.webp"
+            alt={alt}
             onClick={(e) => e.stopPropagation()}
             style={{
               maxWidth: '95vw',

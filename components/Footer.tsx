@@ -1,13 +1,13 @@
- 'use client'
+  'use client'
 
-type FooterProps = {
-  showContact?: boolean
-}
+ type FooterProps = {
+   showContact?: boolean
+ }
 
-export default function Footer({ showContact = true }: FooterProps) {
-  return (
-    <footer style={{ backgroundColor: '#1a1a1a', color: '#ffffff', padding: '3rem 0' }}>
-      <div className="container-custom">
+ export default function Footer({ showContact = true }: FooterProps) {
+   return (
+     <footer style={{ backgroundColor: '#1a1a1a', color: '#ffffff', padding: '3rem 0' }}>
+       <div className="container-custom">
         {/* Header */}
         <div style={{ marginBottom: '2.5rem' }}>
           <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', margin: '0 0 0.5rem 0', textTransform: 'uppercase', letterSpacing: '0.05em' }}>DCFB Wellness</h2>
@@ -68,4 +68,3 @@ export default function Footer({ showContact = true }: FooterProps) {
     </footer>
   )
 }
-
