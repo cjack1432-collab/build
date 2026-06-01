@@ -141,7 +141,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="w-full mx-auto" style={{ maxWidth: '460px' }}>
+          <div className="w-full mx-auto" style={{ maxWidth: '320px' }}>
             <div
               className="overflow-hidden"
               style={{
@@ -150,18 +150,15 @@ export default function Home() {
                 boxShadow: '0 18px 35px rgba(0, 0, 0, 0.08)',
               }}
             >
-              <div style={{ aspectRatio: '3 / 2', overflow: 'hidden' }}>
-                <LightboxImage
-                  src="/images/ai-modern-cognitive-leverage-cover.webp"
-                  alt="AI as Modern Cognitive Leverage guide cover by Moderate Murmurations."
-                  width={1254}
-                  height={1254}
-                  sizes="(min-width: 768px) 460px, 100vw"
-                  className="block w-full h-full"
-                  imageClassName="block h-full w-full object-cover cursor-zoom-in"
-                  imageStyle={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
-              </div>
+              <LightboxImage
+                src="/images/ai-modern-cognitive-leverage-cover.webp"
+                alt="AI as Modern Cognitive Leverage guide cover by Moderate Murmurations."
+                width={1254}
+                height={1254}
+                sizes="(min-width: 768px) 320px, 100vw"
+                className="block w-full"
+                imageClassName="block h-auto w-full object-contain cursor-zoom-in"
+              />
             </div>
           </div>
         </div>
