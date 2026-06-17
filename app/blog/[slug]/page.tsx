@@ -3,12 +3,12 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArticleJsonLd } from '../components/ArticleJsonLd';
 import { TagList } from '../components/TagList';
-import { BLOG_BASE_PATH, SITE_URL } from '../constants';
+import { BLOG_BASE_PATH } from '../constants';
 import { formatDate } from '../format';
 import { blog } from '../lib/blog-client';
 import '../blog-content.css';
 
-export const revalidate = 86400;
+export const dynamic = 'force-dynamic';
 
 // Return [] so no article pages are pre-rendered at build time.
 // Articles are served on-demand via ISR (revalidate = 86400).
@@ -23,25 +23,10 @@ export async function generateMetadata({
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
-  const article = await blog.getArticleBySlug(slug);
-  if (!article) {
-    return {};
-  }
-  const canonical = SITE_URL ? `${SITE_URL}${BLOG_BASE_PATH}/${article.slug}` : undefined;
+  await params;
   return {
-    title: article.title,
-    description: article.meta_description,
-    alternates: canonical ? { canonical } : undefined,
-    openGraph: {
-      type: 'article',
-      title: article.title,
-      description: article.meta_description,
-      url: canonical,
-      images: article.hero_image_url ? [{ url: article.hero_image_url }] : undefined,
-      publishedTime: article.created_at,
-      modifiedTime: article.updated_at,
-    },
+    title: 'Article | Moderate Murmurations',
+    description: 'Insights from Moderate Murmurations.',
   };
 }
 
