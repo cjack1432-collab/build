@@ -10,14 +10,12 @@ import '../blog-content.css';
 
 export const revalidate = 86400;
 
-export async function generateStaticParams() {
-  try {
-    const articles = await blog.getAllArticles();
-    return articles.map((article) => ({ slug: article.slug }));
-  } catch {
-    // API unavailable or key not configured — skip static pre-render, serve on-demand.
-    return [];
-  }
+// Return [] so no article pages are pre-rendered at build time.
+// Articles are served on-demand via ISR (revalidate = 86400).
+// This avoids hitting the API rate limit (max 2 req/s) during concurrent
+// static generation. Vercel ISR caches each article after its first request.
+export function generateStaticParams() {
+  return [];
 }
 
 export async function generateMetadata({

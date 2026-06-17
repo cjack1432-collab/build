@@ -6,9 +6,9 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '*',
-        // TODO: tighten to the exact BabyLoveGrowth image CDN hostname once known
-        // (e.g. hostname: 'cdn.babylovegrowth.ai') for improved security.
+        hostname: 'csuxjmfbwmkxiegfpljm.supabase.co',
+        // BabyLoveGrowth article image CDN (Supabase storage).
+        // If BabyLoveGrowth migrates their CDN, update this hostname.
       },
     ],
   },
