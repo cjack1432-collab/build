@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import type { BlogArticleSummary } from 'babylovegrowth-next-js-blog';
 import { BLOG_BASE_PATH } from '../constants';
@@ -12,12 +11,11 @@ export function ArticleCard({ article }: { article: BlogArticleSummary }) {
     >
       {article.hero_image_url ? (
         <div className="relative aspect-[16/9] w-full overflow-hidden bg-gray-100">
-          <Image
+          {/* Plain <img> bypasses next/image hostname validation for external CDN images. */}
+          <img
             src={article.hero_image_url}
             alt={article.title}
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover transition duration-300 group-hover:scale-105"
+            className="object-cover w-full h-full transition duration-300 group-hover:scale-105"
           />
         </div>
       ) : null}
